@@ -43,6 +43,9 @@ editor: https://excalidraw.com/
 3.ternery operator:  
     let num = Number("saikiran")
     isNaN(num) ? console.log("give a number"): console.log("it is number")
-
-
+-----------------------------------------------------------------------------
+> keydown have the access of all keys on the keyboard
+> keypress dont have access for keys like ctrl,alt,shift etc..
+> *** We use the window object for keyboard events because key presses happen at 
+  the browser level, and window can capture them regardless of focus.***
      

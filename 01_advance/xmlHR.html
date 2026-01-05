@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body style="background-color: black ; color:white">
+    <h1 id="heading">Hey..!</h1>
+  </body>
+  <script>
+/*  				XHR(XMLHTTPREQUEST)
+> XML -> xtensible markup lang.
+ 1.Extensible → You can create your own tags
+ 2.Markup → Uses tags like <tag>
+ 3.Language → Rules to structure data.
+ > XML is used to store and transport data, not to design websites.
+---
+e.g: <user>
+      <name>Sai Kiran</name>
+      <age>22</age>
+     </user>
+--------------------------------------------------------------
+
+> constructor function is used to create a new object.
+  e.g:
+ 	const user1 = new User("Sai", 22);
+ 	const user2 = new User("Kiran", 25);
+
+ 	console.log(user1.name); // Sai
+ 	console.log(user2.age);
+--------------------------------------------------------------
+
+** XMLHttpRequest(XHR): is an old JavaScript way to talk to servers (APIs) and get data without reloading the page.
+
+> XMLHttpRequest is a browser-provided Web API constructor used to create objects that make HTTP requests.
+ 
+READYSAATE: readyState is a property of the XMLHttpRequest object that tells which stage the HTTP request is currently in.
+> In general terms readyState property tells the current http stage.
+> readystate property holds number
+readystatechange: it is a callback function  
+
+ONREADYSTATECHANGE: onreadystatechange is an event handler property that runs a callback function 
+whenever the readyState of an XMLHttpRequest changes.
+
+DIFFERENCE BETWEEEN READYSTATE AND ONREADYSTATECHANGE:
+readyState stores the current stage of the request,
+and onreadystatechange is the mechanism that notifies JavaScript when that stage changes so your code can react.
+
+> readystate includes stages:
+Value	 Name	                 Meaning (simple)
+0	     UNSENT                   REQUEST created, nothing started                
+1        OPENED                   OPEN() request sent
+2        HEADERS_RECEIVED         Server received request
+3        LOADING                  Data is coming
+4        DONE                     responce fully received
+
+*/
+const url = 'https://api.github.com/users/saikiran-upparipalli'
+const xml = new XMLHttpRequest()
+xml.open('GET',url)
+console.log(xml.readyState)
+xml.onreadystatechange = function(){
+    // console.log(xml.readyState)
+    if(xml.readyState === 4){
+        console.log(this.responseText)
+    }
+
+}
+xml.send()
+  </script>
+  </html>
+
+ 

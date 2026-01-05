@@ -48,4 +48,7 @@ editor: https://excalidraw.com/
 > keypress dont have access for keys like ctrl,alt,shift etc..
 > *** We use the window object for keyboard events because key presses happen at 
   the browser level, and window can capture them regardless of focus.***
+-----------------------------------------------------------------------------
+What is property?
+A property is a value that belongs to an object.
      

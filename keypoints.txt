@@ -51,4 +51,16 @@ editor: https://excalidraw.com/
 -----------------------------------------------------------------------------
 What is property?
 A property is a value that belongs to an object.
+----------------------------------------------------------------------------
+> JavaScript runs on the V8 engine, which is written in C++
+ and converts JavaScript into machine code for execution.
+ 
+ JavaScript code
+      ↓
+ V8 Engine (built using C++)
+      ↓
+ Machine code (0s and 1s)
+      ↓
+ CPU executes
+------------------------------------------------------------------------------
      

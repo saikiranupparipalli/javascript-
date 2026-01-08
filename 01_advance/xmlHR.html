@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      #btn{
+         font-size: 20px;
+      }
+    </style>
   </head>
   <body style="background-color: black ; color:white">
     <h1 id="heading">Hey..!</h1>
+    <!-- <img src="https://avatars.githubusercontent.com/u/11613311?v=4" alt=""> -->
+    <button id="btn">click</button>
   </body>
   <script>
 /*  				XHR(XMLHTTPREQUEST)
@@ -35,10 +42,11 @@ e.g: <user>
 
 > XMLHttpRequest is a browser-provided Web API constructor used to create objects that make HTTP requests.
  
-READYSAATE: readyState is a property of the XMLHttpRequest object that tells which stage the HTTP request is currently in.
+READYSTATE: readyState is a property of the XMLHttpRequest object that tells which stage the HTTP request is currently in.
 > In general terms readyState property tells the current http stage.
 > readystate property holds number
-readystatechange: it is a callback function  
+
+onreadystatechange: it is a callback function  
 
 ONREADYSTATECHANGE: onreadystatechange is an event handler property that runs a callback function 
 whenever the readyState of an XMLHttpRequest changes.
@@ -49,25 +57,69 @@ and onreadystatechange is the mechanism that notifies JavaScript when that stage
 
 > readystate includes stages:
 Value	 Name	                 Meaning (simple)
-0	     UNSENT                   REQUEST created, nothing started                
-1        OPENED                   OPEN() request sent
+0	       UNSENT                   REQUEST created, nothing started                
+1        OPENED                   OPEN() request has configured, but not sent.
 2        HEADERS_RECEIVED         Server received request
 3        LOADING                  Data is coming
 4        DONE                     responce fully received
 
+
+> Usually, Data sent from the frontend to the backend is usually converted into a JSON string,
+the backend then parses it and stores it in the database in the database’s own format.
+
+>Data comes from the backend as a JSON string, and we must convert (parse) it into a JavaScript object to use it.
+
 */
-const url = 'https://api.github.com/users/saikiran-upparipalli'
+let image;
+let follow;
+const url = 'https://api.github.com/users/hiteshchoudhary'
 const xml = new XMLHttpRequest()
 xml.open('GET',url)
 console.log(xml.readyState)
 xml.onreadystatechange = function(){
     // console.log(xml.readyState)
     if(xml.readyState === 4){
-        console.log(this.responseText)
+      const data = JSON.parse(this.responseText)
+      // console.log(typeof data)
+      // console.log(data)
+      // console.log(data.avatar_url)
+      image = data.avatar_url
+      follow = data.followers
+  
     }
 
 }
 xml.send()
+
+const button = document.querySelector('#btn').addEventListener('click',function(){
+  const div = document.createElement('div')
+  const img = document.createElement('img')
+  const h1 = document.createElement('h1')
+  img.src = image
+  img.width = 100
+  div.appendChild(img)
+  div.appendChild(h1)
+  h1.innerText = `followers: ${follow}`
+  div.style.color = 'orange' 
+  h1.style.fontSize = '20px'
+  img.style.borderRadius = '120px'
+  document.body.appendChild(div) 
+})
+/*
+> JavaScript runs on the V8 engine, which is written in C++
+ and converts JavaScript into machine code for execution.
+ 
+ JavaScript code
+      ↓
+V8 Engine (built using C++)
+      ↓
+Machine code (0s and 1s)
+      ↓
+CPU executes
+
+*/
+  
+  
   </script>
   </html>
 

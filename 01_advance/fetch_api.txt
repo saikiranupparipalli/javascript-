@@ -1,0 +1,77 @@
+- fetch(): is a webAPI function provided by the browser.
+- fetch api has seperate queue called microtask queue, in which callback functions 
+of fetch are stored. 
+- microtasks have higher priority because they represent continuation of current execution 
+(Promise callbacks like then, catch, finally) and must complete before,
+new external tasks like settimeout,setinterval are processed.
+
+WORKING OF FETCH API internally:
+
+1.fetch() creates a Promise and it is stored in a variable
+
+2.HTTP request is handed over to the browser
+
+3.Browser receives the response (or network error)
+
+4.Promise is settled
+
+5.success → fulfilled with a Response object
+
+6.failure → rejected with an Error object
+
+7.Based on the state, the corresponding callback functions
+(from .then() or .catch()) are selected
+
+8.Those callbacks are placed into the microtask queue
+
+9.Event loop moves callbacks from microtask queue to call stack
+
+10.Callbacks get executed
+ 
+flow chart:
+
+┌───────────────┐
+│ JS Code       │
+│ fetch(url)    │
+└───────┬───────┘
+        │
+        ▼
+┌─────────────────────────┐
+│ Promise (stored in var) │
+│ state: pending          │
+│ onFulfilled: callbacks  │
+│ onRejected: callbacks   │
+└─────────┬───────────────┘
+          │
+          ▼
+┌─────────────────────────┐
+│ Browser / Web APIs      │
+│ (Network request sent) │
+└─────────┬───────────────┘
+          │
+          ▼
+┌─────────────────────────┐
+│ Response arrives        │
+│                         │
+│ Success → fulfilled     │
+│ Error   → rejected      │
+│ (result stored in Promise)
+└─────────┬───────────────┘
+          │
+          ▼
+┌─────────────────────────┐
+│ Microtask Queue         │
+│ (.then / .catch cbs)   │
+└─────────┬───────────────┘
+          │
+          ▼
+┌─────────────────────────┐
+│ Event Loop              │
+│ (Call stack empty?)     │
+└─────────┬───────────────┘
+          │
+          ▼
+┌─────────────────────────┐
+│ Call Stack              │
+│ (callbacks executed)   │
+└─────────────────────────┘

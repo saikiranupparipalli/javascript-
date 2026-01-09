@@ -55,3 +55,5 @@ All these steps are executed by the same thread in order.
   The event loop monitors the call stack and, when it is empty,
   moves microtasks first and then tasks into the call stack for execution.
   Objects and data are stored in the memory heap during execution.
+  
+  > setTimeout() is a webAPI function provided by the browser (not core JavaScript).

@@ -1,0 +1,11 @@
+ webAPI: Web APIs are browser-provided tools that JavaScript uses to handle tasks like timers,DOM manipulation.
+  ***A Web API is one type of API among many available APIs.***
+
+  WHAT DOES WEBAPI DO?
+  Web APIs take work off JavaScript’s hands, do it in the background, and notify JavaScript when it’s done.**
+  
+  NodeAPI: are APIs provided specifically for the Node.js runtime environment.
+
+  *** e.g of how DOM API: ***
+ > DOM API methods are provided by the browser and are exposed through the window object,
+   which JavaScript uses to access and manipulate the DOM.

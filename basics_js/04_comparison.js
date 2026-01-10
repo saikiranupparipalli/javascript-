@@ -7,3 +7,14 @@
 /* == operator checks only value equality 
      Dont use == operator to avoid issues.
    */
+
+// strict equality operator > ===
+// equality operator > ==
+
+console.log(null < 0)
+console.log(null > 0)
+console.log(null == 0)
+console.log(null >= 0)
+// the reason behind null >= 0 is, equality check (==) and comparisions
+// (<>=<=) work differently.
+//  comparisons convert null to number, treat it as 0

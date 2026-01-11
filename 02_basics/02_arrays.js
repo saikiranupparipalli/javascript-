@@ -28,4 +28,29 @@ console.log(Array.of(score1,score2,score3))  //--> Array.of() method converts th
 //const scores = [score1,score2,score3]
 //console.log(scores.join())   
 
+// practice:
+
+const arrOne = new Array("upparipalli")
+const arrTwo = new Array("saikiran")
+
+console.log([...arrOne,...arrTwo])
+console.log(...arrOne,...arrTwo)
+// there two consoles will give o/p in different types.
+
+const arrThree = new Array(3,82,[8,9,90,[9,8,7]])
+console.log(arrThree.flat(Infinity))
+
+const arrFour = new Array("saikiran")
+/* arrFour is already an array, so Array.from(arrFour) 
+creates a shallow copy of it. */
+console.log(Array.isArray(arrFour))
+console.log(Array.from(arrFour))
+
+
+console.log(Array.from("saikiran"))
+/* A string is an iterable, because its characters can be
+accessed one by one in sequence.since,"saikiran" is a string, so Array.from("saikiran") 
+converts it into individual characters. */
+
+
 

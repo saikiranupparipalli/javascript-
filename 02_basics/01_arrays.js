@@ -35,7 +35,7 @@ console.log("A ",myArray)
 let mynewArr = myArray.slice(0,3) //--> slice() fun extracts elements without changing the original array.
 console.log(mynewArr)
 console.log("B",myArray)
-// NOTE:splice() gives a new array of removed elements,where slice() gives a new array of copied elements (nothing is removed).
+// NOTE:splice() gives a new array of removed elements,where as slice() gives a new array of copied elements (nothing is removed).
 let mynewArr2 = myArray.splice(0,3) //--> splice() fun extracts elements by changing orignal array.
 console.log("C",myArray)
 
@@ -43,3 +43,12 @@ console.log("C",myArray)
 //console.log(mynewArr2)
  
 
+// ** imp topic: shallow copies and deep copies in array **
+
+// practice: 
+
+// const arrNew = new Array(9,3,8,8)
+// console.log(arrNew)
+
+const arrNew = new Array(9,3,8,8)
+console.log(arrNew.indexOf(9))

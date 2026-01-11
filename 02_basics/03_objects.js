@@ -1,14 +1,18 @@
- //--> OBJECTS LITERALS----------------------
- 
- let mySymbol = Symbol("sai")
+
+//  Note: object defined using syntax are know as literals, objects defined using new keyword are know as constructors.
+//  singleton: is an object that is created only once and reused everywhere.
+//   e.g: const obj1 = { name: "Sai" }; // singleton
+
+// object defined using litrals: 
+let mySymbol = Symbol("sai")
  const myObj = {
     name:"saikiran",
     email:"saikiran@gmail.com",
     contact:6300490290,
     location:"TG",
     [mySymbol]: "sai"
-/*---------------NOTE: 1.whenever you want to access Symbol inside of an obj,you have to mention the Symbol inside [] (eg:[mySymbol]).Even though o/p is same but datatype will change in background.
----------------------  2.The variables inside of an object cosider as a string in background.(eg: variable name is consider as "name").
+/*-NOTE: 1.whenever you want to access Symbol inside of an obj,you have to mention the Symbol inside [] (eg:[mySymbol]).Even though o/p is same but datatype will change in background.
+    2.The variables inside of an object consider as a string in background.(eg: variable name is consider as "name").
  */
 }
 

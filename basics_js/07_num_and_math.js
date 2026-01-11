@@ -19,7 +19,9 @@ let number2 = 18.78
 
 
 
-//--------------------------------------MATH OBJECT--------------------------------------------------------
+//--------------------------------------MATH library--------------------------------------------------------
+
+// math called as library in conceptual wise since it provides the functionality and object as technical wise since it has methods,properties in it.
 
 // console.log(Math.round(445.8)) //--> round() fun gives the round value of the input.
 
@@ -47,19 +49,5 @@ console.log(Math.floor(Math.random() * (max - min + 1)+ min)) // random is gener
 //since we want to start generation of values starts from 15(min value).so,we add generated value with min value.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
-
+  

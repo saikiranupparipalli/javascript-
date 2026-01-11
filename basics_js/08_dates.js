@@ -25,4 +25,15 @@ console.log(todayDate.getMonth() +1)
 
 }) --> we will study in detail in coming files. */
 
-console.log(Date.now())
+// console.log(Date.now())
+
+console.log(new Date().toLocaleString())
+
+// console.log(new Date().toJSON())
+// console.log(new Date().toISOString())
+
+const date = new Date(()=>{
+    console.log(`Today it is: ${date}`)
+});/* The date is not showing because Date does not execute callbacks; 
+  passed a function that never runs. */
+ 

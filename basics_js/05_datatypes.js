@@ -5,7 +5,10 @@
     let number2=Symbol(123);
     console.log(number===number2); // example for symbol datatype.In symbol datatype 'S' should be capital.
 
-// Arrays,objects,functions are non-primitive datatypes in js.
+// Arrays,objects,functions are refernce (non-primitive) datatypes in js.
+
+// JavaScript is a dynamically typed language. Because data type will automatically assigned at the time of compilation or code execution. 
+
 
 let arr=["hey","how are","you?"]; 
 console.log(arr);
@@ -55,5 +58,33 @@ let myFun=function(a=10,b=20){
     /* As we see in the above example, when we change the value of myObjone object,it also affect the value of myObjtwo object.
     Because both the objects are pointing to the same location in heap memory. */
 
-    
-    
+
+// practice code:
+
+    const undefined = "undefined"; 
+    const Null = "object";
+    const boolean = "boolean"
+    const num = "number"
+    const string = "string"
+    const object = "object"
+    const objectCallfunction = "function"
+    const objecthostandNotcallfun = "object"
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3 --> typeof check info
+
+// console.table([undefined,Null,boolean,num,string,object,objectCallfunction,objecthostandNotcallfun])
+
+
+const objOne = {
+    age: 38,
+    id:8989,
+    function(num1,num2){
+        console.log(num1 + num2)
+
+    },
+ 
+}
+console.log(objOne)
+console.log(objOne.function(3,4))
+console.log(typeof objOne)
+ 

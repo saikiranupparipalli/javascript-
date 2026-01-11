@@ -22,7 +22,6 @@
 
 let cartoonName = "      shichan           "
 console.log(cartoonName)
-
 console.log(cartoonName.trim()) // trim() method is used to remove the extra space.
 
 

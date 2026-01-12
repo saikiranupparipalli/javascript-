@@ -74,3 +74,43 @@ definingFun2()
          | -------- |-------------------------  | -------------------------------- |
          | Method 1 |`function name(){}`        | Function is defined directly     |
          | Method 2 |`variable = function(){}`  | Function is stored in a variable |  */
+
+
+
+
+// practice:
+
+function addNumbers(num1,num2,...num3){
+    return [num1,num2,num3]
+}
+
+console.log(addNumbers(32,32,23,43,54,45))
+
+const userInfo = {
+    name:"sai",
+    age:22,
+    message:"how are you?"
+}
+
+function getUserInfo(details){
+    return `name of the user is: ${details.name},
+    age of the user is: ${details.age}, message from user is
+    ${details.message}`
+}
+
+console.log(getUserInfo(userInfo))
+
+
+
+const arr = [2,3,4,5,6]
+
+function getarr(arr){
+    return `${arr[2],arr[3]}`
+}// due to , two elements cant get consoled.
+console.log(getarr(arr))
+
+const a = 23
+let b = 45
+var c = 89
+
+console.table([a,b,c]);

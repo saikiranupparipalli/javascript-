@@ -63,4 +63,11 @@ A property is a value that belongs to an object.
       ↓
  CPU executes
 ------------------------------------------------------------------------------
-     
+- JavaScript code is executed by the JavaScript engine inside the browser (like V8).
+- The engine’s full name is simply V8 JavaScript Engine.  
+   > Developed by Google
+   > Written in C++
+   > Used in Chrome and Node.js
+
+- Node.js uses the existing V8 JavaScript engine and adds its own environment so JavaScript can run outside the browser.
+------------------------------------------------------------------------------

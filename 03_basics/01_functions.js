@@ -82,3 +82,33 @@ function getArray(myarr){ //--2.The function receives the array as myarr.
 
 console.log(getArray(array)) //-->4.array is passed to the function.
  
+// practice:
+
+// function callMe(){
+// console.log('hey')
+// console.log('how')
+// console.log('are')
+// console.log('you?')
+// }
+ 
+// console.log(callMe); //it is the reference of function.
+// console.log(callMe()); //it is the execution of function.
+
+// function addNumbers(num1,num2){
+//     return num1 + num2
+// }
+
+// const resultOne = addNumbers(2,2)
+// console.log(resultOne)
+
+
+function myName(fullname){
+    if(!fullname){
+        console.log('enter your name.')
+    } else{
+        return `${fullname} is my fullname.`
+    }
+    
+}
+// !Not operator reverse the value truthiness.
+console.log(myName())

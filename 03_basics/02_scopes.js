@@ -63,7 +63,7 @@ function definingFun(num1){
 definingFun()
 
 //---METHOD-2
-let definingFun2 = function(value){
+let definingFun2 = function(value){ //in few usecases/scenarios we will call this as expression.
     value = 90
     console.log(value)
 }
@@ -114,3 +114,27 @@ let b = 45
 var c = 89
 
 console.table([a,b,c]);
+
+// practice:
+
+function nestOne(num1, num2){
+    const result = num1 + num2
+     
+    function nestTwo(){
+        return result
+
+    }
+    return nestTwo()
+}
+
+console.log(nestOne(1,9));
+
+
+if(true){
+    let welcome; 
+    if(!welcome === false){
+        console.log('leave')
+    }else{
+        console.log(`welcome on board`)
+    }
+}

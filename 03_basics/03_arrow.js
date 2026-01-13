@@ -52,4 +52,38 @@ const addnumbers =(num1,num2) => (num1 + num2) //-->1.implicit return operator: 
 //2.Implicit return works only when there are no {} braces
 console.log(addnumbers(9,4))
 
- 
+
+// practice:
+
+const objOne = {
+    name:"saikiran",
+    message: function(){
+        console.log(`welcome, ${this.name}`)
+        return 'hey'
+    },
+
+  
+}
+
+console.log(objOne.message())
+objOne.name = "upparipalli"
+console.log(objOne.message());
+
+// console.log(this);
+
+
+function thisKeyword(){
+    console.log(this);
+// NOTE: Since no object calls the normal function, this defaults to the global object (in Node.js non-strict mode).
+}
+ thisKeyword();
+
+
+(() => {console.log(this)})() //since, it is like only writing "console.log('hey')" inside one new index js, it is treated as written on top level. just like that arrow function is get treated.
+// top of the nodejs environment, module exports are present, so modules export is empty before importing any methods or object or functions.
+
+
+
+
+// (() => console.log('this')) (); //iife 
+// (() => console.log('js')) ()

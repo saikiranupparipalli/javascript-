@@ -1,5 +1,6 @@
 /* --> A **switch** is a control statement that selects and executes code blocks based on the value of an 
  expression by matching it against multiple cases. */
+// Note: switch is a conditional statement and contol flow statement.
 
  const month = 13
 
@@ -44,3 +45,24 @@
         console.log("We have only 12 months in a year 😅")
         break;
  }
+
+//  practice:
+
+let userloggedIn;
+
+if(true){
+    switch (userloggedIn) {
+        case true:
+            console.log('user just logged in.');
+            break;
+        case false:
+            console.log('enter correct username');
+            break;
+            
+        default:
+            console.log('enter username:')
+            break;
+    }
+}
+
+// let allows declaration without initialization because reassignment is allowed later, whereas const requires initialization at declaration time because reassignment is not allowed.

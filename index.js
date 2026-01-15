@@ -6,4 +6,5 @@
 // console.log(arr);
 // console.log(typeof arr);
 
+ console.log('hey');
  

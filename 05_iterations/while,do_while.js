@@ -58,7 +58,7 @@ let arrCount = 0;
 
 while (arrCount < lengthOfobjOne.length) {
   console.log(objOne[lengthOfobjOne[arrCount]]);
-
+// lengthOfobjOne stores only keys; those keys are used to fetch values from objOne, where the values actually live.
   arrCount = arrCount + 1;
 }
 

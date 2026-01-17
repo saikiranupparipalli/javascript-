@@ -38,3 +38,34 @@ const shoppingCart = [
 const addTotal = shoppingCart.reduce((acc,currval)=> ( acc + currval.price ),0)
 console.log(addTotal)
 
+// practice:
+
+let total = [3,4,2,3]
+
+const totalNums = total.reduce( (givenNum, arrvalue) =>{
+    console.log(`givenNum: ${givenNum}, arrvalue: ${arrvalue}`)
+    return givenNum + arrvalue
+},0)
+
+console.log(totalNums);
+
+
+let names  = [" kiran"]
+
+const concatNames = names.reduce( (givenValue, arrVal) =>{
+    return (givenValue + arrVal)
+
+},"sai")
+// console.log(concatNames)
+
+
+let strName  = ' upparipalli'
+
+const concatName = strName.split('').reduce( (givenVal, arrVale) =>{
+    // console.log(`givenVal: ${givenVal}, arrVale: ${arrVale}`);
+
+// "" means: break the string into single characters.
+    return (givenVal + arrVale)
+
+},"saikiran")
+console.log(concatName)

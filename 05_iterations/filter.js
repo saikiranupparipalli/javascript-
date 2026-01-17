@@ -42,3 +42,11 @@ console.log(findBooks)
 getbook = books.filter((item)=> item.genre === 'Fiction')
 console.log(getbook)
 
+books.forEach( (book) => {
+    if(book.publish === 2009){
+         console.log(book)
+         console.log('Here is your book..😉')
+    }
+
+})
+

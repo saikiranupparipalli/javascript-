@@ -4,13 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      /* #date{
+        border-radius: 10px;
+        background-color: black;
+        color:white;
+      } */
+    </style>
   </head>
   <body style="background-color: black; color: white">
+   
+    <h1 id="heading">Dom learning. <span style="display: none;"> from chai aur code</span></h1>
     <button id="btn">click</button>
+
+     <ul>
+      <li class="item">hey</li>
+      <li class="item">how are</li>
+      <li class="item">you?</li>
+     </ul>
   </body>
   <script>
-    document.querySelector("#btn").addEventListener("click", () => {
-      window.alert("hey");
+      const ul = document.querySelector('ul')
+       console.log(ul)
+      const li = ul.querySelector('li:nth-child(3)')
+      li.innerText = 'HEY'
+      li.style.color = 'skyblue'
+
+
+
+
+
+    const btn = document.querySelector("#btn").addEventListener("click", ( ) => {
+       window.alert('hey')
+      
     });
+    console.log(btn)
   </script>
 </html>

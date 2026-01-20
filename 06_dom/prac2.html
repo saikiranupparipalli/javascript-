@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document object model.</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <ul>
+         <!-- hey -->
+        <li>Day One</li>
+        <li>Day Two</li>
+        <li>Day Three</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // const parent = document.querySelector(".parent");
+    // const ul = parent.querySelector("ul");
+    // console.log(parent.children);
+    // console.log((ul.children[1].style.color = "orange"));
+    // console.log(parent);
+    // console.log(parent.childNodes);
+    // console.log("nodes:", ul.childNodes);
+    // console.log(parent.querySelector("ul"));
+
+    const ul = document.querySelector("ul");
+    // console.log(ul.parentElement.setAttribute("id", "parentOne"));
+    // console.log(ul.parentElement);
+    // console.log(ul.parentElement.innerHTML);
+
+    const htmlCol = ul.childNodes;
+    console.log(htmlCol);
+    const arr = Array.from(htmlCol);
+    // console.log(arr);
+    // arr.forEach((eachval) => {
+    //   // console.log(eachval)
+    // });
+
+    for (let index = 0; index < arr.length; index++) {
+      console.log(arr[index]);
+    }
+  </script>
+  <!--  
+document.documentElement.parentElement is null because the <html> element does not have any parent element;
+ its parent is the document, which is not an element.
+ -->
+</html>

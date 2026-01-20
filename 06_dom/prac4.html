@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document object model</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div id="parent">
+      <ul class="ul">
+        <li>py</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    function display(langName) {
+      const ul = document.querySelector(".ul");
+      const li = document.createElement("li");
+      ul.appendChild(li);
+      li.innerHTML = langName;
+
+      document.body.appendChild(ul);
+    }
+    display("js");
+
+    function optdisplay(languageName){
+        const ul = document.querySelector('.ul')
+        const createli = document.createElement('li')
+        createli.appendChild(document.createTextNode(`${languageName}`))
+        ul.appendChild(createli)
+        document.body.appendChild(ul)
+    }
+    optdisplay('php')
+
+    const changeli = document.querySelector('li:nth-child(1)')
+    const li = document.createElement('li')
+    li.textContent = 'C ++'
+    changeli.replaceWith(li)
+   
+  </script>
+</html>

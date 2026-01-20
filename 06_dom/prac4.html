@@ -32,10 +32,13 @@
     }
     optdisplay('php')
 
-    const changeli = document.querySelector('li:nth-child(1)')
+    const changeli = document.querySelector('li:nth-child(2)')
     const li = document.createElement('li')
     li.textContent = 'C ++'
     changeli.replaceWith(li)
-   
+
+    const list = document.querySelector('li:first-child')
+    list.outerHTML = '<p> typescript </p>'
+ 
   </script>
 </html>

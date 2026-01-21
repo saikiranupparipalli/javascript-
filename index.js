@@ -8,3 +8,6 @@
 
  console.log('hey');
  
+
+ const num = parseInt('mk')
+ console.log(num)

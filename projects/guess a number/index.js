@@ -62,7 +62,7 @@ function clearValues(userInput) {
 }
 
 function displayMessage(message) {
-  lowOrHi.innerHTML = `${message}`;
+  lowOrHi.innerHTML =`${message}`
 }
 
 function endGame(){

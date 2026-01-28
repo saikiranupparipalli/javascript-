@@ -94,15 +94,19 @@ body {
 }
 
 /* Sample filled states (UI only) */
+
 .strength-bar .weak {
+   
   background: #ef4444;
 }
 
 .strength-bar .medium {
+   
   background: #f59e0b;
 }
 
 .strength-bar .strong {
+   
   background: #22c55e;
 }
 

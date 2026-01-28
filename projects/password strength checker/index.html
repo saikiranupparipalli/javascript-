@@ -1,45 +1,45 @@
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Password Strength Checker</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: #212121;">
+    <div class="card">
+      <h1>Password Strength Checker</h1>
 
-  <div class="card">
-    <h1>Password Strength Checker</h1>
-
-    <div class="input-box">
-      <input type="password" placeholder="Enter your password" />
-      <span class="eye">👁️</span>
-    </div>
-
-    <p class="instruction">Use at least 8 characters, including letters and numbers.</p>
-
-    <div class="strength-container">
-      <div class="strength-bar">
-        <span class="weak"></span>
-        <span class="medium"></span>
-        <span class="strong"></span>
+      <div class="input-box">
+        <input type="password" placeholder="Enter your password" />
+        <span class="eye">👁️</span>
       </div>
 
-      <div class="labels">
-        <span>Weak</span>
-        <span>Medium</span>
-        <span>Strong</span>
+      <p class="instruction">
+        Use at least 8 characters, including letters and numbers.
+      </p>
+
+      <div class="strength-container">
+        <div class="strength-bar">
+          <span class="weak"></span>
+          <span class="medium"></span>
+          <span class="strong"></span>
+        </div>
+
+        <div class="labels">
+          <span>Weak</span>
+          <span>Medium</span>
+          <span>Strong</span>
+        </div>
+      </div>
+      <div>
+        <button class="check-btn">Check Strength</button>
       </div>
     </div>
-     <div>
-       <button class="check-btn">Check Strength</button>
-    </div>
-  </div>
- 
-  
-</body>
-<script src="index.js"></script>
+  </body>
+  <script src="index.js"></script>
 </html>

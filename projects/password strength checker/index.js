@@ -1,4 +1,5 @@
 const password = document.querySelector('input[type="password"]');
+
 const button = document.querySelector(".check-btn");
 
 let instruction = document.querySelector(".instruction");

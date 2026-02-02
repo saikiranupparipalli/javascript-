@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <!-- Input -->
+    <div class="todo-input">
+      <input
+        type="text"
+        id="todo-text"
+        placeholder="Add a new task..."
+      />
+      <button id="add-btn">Add</button>
+    </div>
+
+    <!-- Pending Count -->
+    <p class="pending">
+      Pending Tasks: <span id="pending-count">0</span>
+    </p>
+
+    <!-- Task List -->
+    <ul id="todo-list">
+      <!-- Example task (JS will generate) -->
+      <!--
+      <li class="todo-item completed">
+        <span>Learn JavaScript</span>
+        <button class="delete-btn">✖</button>
+      </li>
+      -->
+       
+    </ul>
+  </div>
+
+</body>
+<script src="index.js"></script>
+</html>

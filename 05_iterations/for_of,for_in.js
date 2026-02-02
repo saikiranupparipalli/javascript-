@@ -7,7 +7,7 @@ let myArr = [2, 9, 48, 7];
 //--> Understand for-of loop in a way that, assigning a new variable inside condition and making it hold
 // the outside varibale/array/object.
 for (const element of myArr) {
-  // console.log(element)
+  console.log(element)
 }
 
 //---------------------MAPS------------------------------------------------------------------

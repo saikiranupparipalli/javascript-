@@ -16,3 +16,16 @@ function add(a,b){
    console.log(a + b) 
 }
 add(8,8)
+
+const name = 'sai kiran from cs undergraduate'
+console.log(name.split(" "))
+console.log(name[2])
+
+
+const myString = "Hello World. How are you doing?";
+const splits = myString.split(" ", 3);
+
+console.log(splits); // [ "Hello", "World.", "How" ]
+
+const split = 'cs under graduate'
+console.log(split.split(" "))

@@ -85,9 +85,9 @@ h1 {
 }
 
 /* Completed task */
-.todo-item.completed span {
+.completed span {
   text-decoration: line-through;
-  color: #888;
+  color: red;
 }
 
 /* Delete button */

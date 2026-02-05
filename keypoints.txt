@@ -21,8 +21,8 @@ LITERALS,CONSTRUCTORS IN OBJECT
  VS CODE SHORTCUTS:
  swift + alt + downarrow to copy text.
  ctrl + ` to open terminal.
- ctrl + L to ger into new line in terminal
- ctrl + swift + L to comment multiple lines at a time.
+ ctrl + L to get into new line in terminal
+ ctrl + // to comment multiple lines which are selected.
  ctrl + D to delete same named variable at a time.
 
  ------------------------------------------------------------------------------

@@ -1,30 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Simple Form</title>
-</head>
-<body>
+  <head>
+    <title>Simple Form</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <form>
+      <!-- Input Box -->
+      <input type="text" placeholder="Enter something" />
 
-  <form>
-    <!-- Input Box -->
-    <input type="text" placeholder="Enter something">
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+    <!-- <img src="" alt=""> -->
+    <ul id="images">
+      <li id="li"><img width="200px"src="https://images.pexels.com/photos/34870436/pexels-photo-34870436.jpeg"id="affinity"/></li>
+     
+      <li><img width="200px"src="https://content.pexels.com/images/canva/canva-branded-ads/en-US/affinity-for-free_640w.png"id="img"/></li>
+     
+      <li><a style="color: white" href="https://www.google.com" id="google">google</a></li>
+    </ul>
+  </body>
+  <script>
 
-    <!-- Submit Button -->
-    <button type="submit">Submit</button>
-  </form>
-
-</body>
-<script>
-    const form = document.querySelector('form')
-    const input = document.querySelector('input')
-    
-    input.addEventListener('input', () => {
-        console.log(input.value)
-    })
-    // form.addEventListener('click', (event) => {
-    //    event.preventDefault()
-    //    alert('hey')  
-    // })
-
-</script>
+    const img = document.getElementById("images");
+    let li = document.querySelector('#li');
+  
+    img.addEventListener("click", (event) => {
+        event.target.id == 'affinity' ? event.target.remove() : console.log('you have clicked first img')
+      
+      // if(event.target.id == 'affinity'){
+      //   console.log(li.parentNode)
+      // } else{
+      //   event.target.tagName == 'IMG' ? event.target.remove() : console.log('you have clicked first img')
+         
+      // }
+      // if(event.target.tagName == 'IMG'){
+      // const remove = event.target.parentNode
+      // console.log(event.target.parentNode)
+      // console.log(event.target.tagName)
+      // remove.remove()
+      // }
+     
+      //    const target =  event.target.remove() = true
+    });
+  </script>
 </html>

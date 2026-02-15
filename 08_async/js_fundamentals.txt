@@ -13,10 +13,10 @@ All these steps are executed by the same thread in order.
 > JavaScript follows a single-threaded, synchronous execution model, which means new task only starts when previous one 
   gets completed.
 
-> Asynchronous code: Asynchronous code is code that allows a program to start a task and continue executing other code 
+> Asynchronous code: Asynchronous code is a code that allows a program to start a task and continue executing other code 
   without waiting for that task to finish
 
-> Blocking-code: is code that stops the execution of other code until it finishes its task.
+> Blocking-code: is a code that stops the execution of other code until it finishes its task.
   e.g:
     console.log("Start");
 

@@ -6,42 +6,61 @@
   <body style="background-color: #212121; color: aliceblue">
     <form>
       <!-- Input Box -->
-      <input type="text" placeholder="Enter something" />
+      <input type="text" id="input" placeholder="Enter something" />
 
       <!-- Submit Button -->
-      <button type="submit">Submit</button>
+      <button type="submit" id="btn">Submit</button>
     </form>
-    <!-- <img src="" alt=""> -->
-    <ul id="images">
+
+    <div class="class">hey</div>
+
+    <!-- <ul id="images">
       <li id="li"><img width="200px"src="https://images.pexels.com/photos/34870436/pexels-photo-34870436.jpeg"id="affinity"/></li>
      
       <li><img width="200px"src="https://content.pexels.com/images/canva/canva-branded-ads/en-US/affinity-for-free_640w.png"id="img"/></li>
      
       <li><a style="color: white" href="https://www.google.com" id="google">google</a></li>
-    </ul>
+    </ul> -->
   </body>
   <script>
+     // const img = document.getElementById("images");
+     // let li = document.querySelector('#li');
 
-    const img = document.getElementById("images");
-    let li = document.querySelector('#li');
-  
-    img.addEventListener("click", (event) => {
-        event.target.id == 'affinity' ? event.target.remove() : console.log('you have clicked first img')
-      
-      // if(event.target.id == 'affinity'){
-      //   console.log(li.parentNode)
-      // } else{
-      //   event.target.tagName == 'IMG' ? event.target.remove() : console.log('you have clicked first img')
-         
-      // }
-      // if(event.target.tagName == 'IMG'){
-      // const remove = event.target.parentNode
-      // console.log(event.target.parentNode)
-      // console.log(event.target.tagName)
-      // remove.remove()
-      // }
-     
-      //    const target =  event.target.remove() = true
-    });
+     // img.addEventListener("click", (event) => {
+     //     event.target.id == 'affinity' ? event.target.remove() : console.log('you have clicked first img')
+     // });
+
+     const btn = document.getElementById("btn");
+    
+
+     btn.addEventListener("contextmenu", () => {
+       alert("contextmenu event listener 😑");
+     });
+
+     btn.addEventListener("dblclick", (event) => {
+       alert("i got clicked man 😡");
+     });
+
+    const clicked = ()=> {
+       const btn = document.getElementById("btn");
+       // btn.addEventListener("click", () => {
+
+       // });
+     }
+    //  setInterval((click) => {
+    //    alert("i got clicked 🫡");
+    //  }, 5000);
+
+     const doc = document.querySelector('body');
+     function rdnColor(){
+       const rdn = Math.round(Math.random() * 255)
+       const rdnTwo = Math.round(Math.random() * 256)
+       const rdnThree = Math.round(Math.random() * 256)
+     return `rgb(${rdn}, ${rdnTwo}, ${rdnThree} )`
+     }
+     setInterval(() => {
+       doc.style.backgroundColor = rdnColor()
+     }, 1000);
+    
   </script>
 </html>

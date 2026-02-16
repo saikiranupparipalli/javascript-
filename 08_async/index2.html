@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+</body>
+<script>
+    const h1 = document.querySelector('h1')
+   const time = function timeNow(){
+         const date =   new Date()
+         h1.textContent = date.toLocaleTimeString()
+   }
+   const clear =  setInterval(time, 1000);
+
+   clearInterval(clear)
+</script>
+</html>

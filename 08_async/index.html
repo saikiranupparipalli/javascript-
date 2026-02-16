@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click</button>
+    <button id="btnn">stop</button>
+  </body>
+  <script>
+    const btn = document.getElementById("btn");
+    const btnn = document.getElementById("btnn");
+    let interval;
+    const click = function clickMe() {
+      alert("i got clicked");
+    };
+    btn.addEventListener("click", () => {
+      if (interval !== null) {
+        interval = setInterval(click, 3000);
+      }
+    });
+    btnn.addEventListener("click", () => {
+      clearInterval(interval);
+      interval = null;
+      console.log("stopped");
+    });
+  </script>
+</html>

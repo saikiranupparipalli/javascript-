@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Center Button</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh; /* Full screen height */
+        display: flex; /* Enable flexbox */
+        justify-content: center; /* Horizontal center */
+        align-items: center; /* Vertical center */
+      }
+
+      button {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* Makes it circle */
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">FAAA...</button>
+    <audio src="audio/faaa.mp3" id="audio"></audio>
+  </body>
+  <script>
+    const btn = document.getElementById('btn')
+const audio = document.getElementById('audio')
+// const doc = document.querySelector('body')
+// const doc = document.querySelector('window')
+function rdnColor() {
+    let numOne =  150 + Math.round(Math.random() * 150)
+    let numTwo =  200 + Math.round(Math.random() * 55)
+    let numThree = 200 +  Math.round(Math.random() * 55)
+    return `rgb(${numOne}, ${numTwo}, ${numThree})`
+}
+setInterval(() => {
+ 
+document.body.style.backgroundColor = rdnColor()  
+ 
+}, 1000);
+
+
+btn.addEventListener('click', () => {
+    audio.play()
+})
+  </script>
+</html>

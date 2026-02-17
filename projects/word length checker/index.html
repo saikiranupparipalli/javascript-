@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Length Checker</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #4e73df, #1cc88a);
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        resize: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4e73df;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #2e59d9;
+      }
+
+      .result {
+        margin-top: 20px;
+      }
+
+      .result h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #444;
+      }
+
+      #output-list {
+        list-style: none;
+      }
+
+      #output-list li {
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Word Length Checker</h1>
+
+      <textarea
+        id="user-input"
+        placeholder="Type a sentence here..."
+      ></textarea>
+
+      <button id="check-btn">Check Length</button>
+
+      <div class="result">
+        <h2>Results:</h2>
+        <ul id="output-list"></ul>
+      </div>
+    </div>
+  </body>
+   <script src="index.js"></script>
+</html>

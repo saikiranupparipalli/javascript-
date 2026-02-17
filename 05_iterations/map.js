@@ -37,3 +37,6 @@ const numbersArr = numbers
     if (numeach >= 11) return numeach;
   });
 console.log(numbersArr);
+
+
+function

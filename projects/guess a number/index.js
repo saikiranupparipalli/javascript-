@@ -18,7 +18,7 @@ if(playGame){
   submit.addEventListener('click', function (event) {
     event.preventDefault();
     const userInput = parseInt(guessNum.value);
-    // console.log(userInput);
+    console.log(userInput);
     checkInstr(userInput);
   });
 }

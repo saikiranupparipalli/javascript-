@@ -8,7 +8,7 @@ textarea.addEventListener('input', () => {
 
 let userInput = textarea.value
 // console.log(typeof userInput)
-// console.log(userInput)
+console.log(userInput)
 // console.log(userInput.length)
 
 char.textContent =  userInput.length

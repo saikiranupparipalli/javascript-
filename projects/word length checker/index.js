@@ -1,14 +1,33 @@
-const userInput = document.getElementById("user-input").value;
+const userInput = document.getElementById("user-input");
 const btn = document.getElementById("check-btn");
-const ul = document.getElementById("output-list");
+let ul = document.getElementById("output-list");
 const result = document.getElementsByClassName("result");
 
 btn.addEventListener("click", () => {
-  const words = userInput.split(" ");
+  const input = userInput.value
+   const splitWords = input.split(" ")
+   console.log(splitWords)
+  const filterSplitWords = splitWords.filter((word) => {
+    return word !== ""
+  })
+  ul.innerHTML = ""
 
-  const filterWords = words.filter((word) => word !== " ");
-  filterWords.map((length) => console.log(length.length));
+  filterSplitWords.forEach(element => {
+    const li = document.createElement("li")
+    li.textContent = ` ${element} => ${element.length}`
+    ul.appendChild(li)
+  });
+// filterSplitWords.map((word) => {
+//     const li = document.createElement("li")
+//     li.textContent = ` ${word} => ${word.length}`
+//     ul.appendChild(li)
+//    })
+  
 });
+
+
+
+
 
 // reduce, map, filter practice:
 // const books = [

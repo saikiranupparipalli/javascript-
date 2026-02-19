@@ -49,3 +49,10 @@ do {
   console.log(j);
    j++;
 } while (j <= 20);
+
+
+const arr = [1,23,3,343,4]
+
+arr.forEach(element => {
+  console.log(element)
+});

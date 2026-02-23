@@ -56,3 +56,5 @@ const arr = [1,23,3,343,4]
 arr.forEach(element => {
   console.log(element)
 });
+
+console.log('hey')

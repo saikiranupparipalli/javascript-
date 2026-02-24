@@ -37,24 +37,23 @@ for (let index = 1; index <= 10; index++) {
   //    console.log(index)
 }
 
-console.log('while loop: ')
+console.log("while loop: ");
 let i = 1;
 while (i <= 5) {
   console.log(i);
   i++;
 }
-console.log('do while loop: ')
+console.log("do while loop: ");
 let j = 1;
 do {
   console.log(j);
-   j++;
+  j++;
 } while (j <= 20);
 
+const arr = [1, 23, 3, 343, 4];
 
-const arr = [1,23,3,343,4]
-
-arr.forEach(element => {
-  console.log(element)
+arr.forEach((element) => {
+  console.log(element);
 });
 
-console.log('hey')
+console.log("hey");

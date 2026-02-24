@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Custom Array Method Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Array Method Simulator</h1>
+
+    <label>Enter Array (comma separated)</label>
+    <input id="arrayInput" placeholder="1,2,3,4,5" />
+
+    <label>Select Method</label>
+    <select id="methodSelect">
+      <option value="map">map</option>
+      <option value="filter">filter</option>
+      <option value="reduce">reduce</option>
+      <option value="find">find</option>
+      <option value="some">some</option>
+      <option value="every">every</option>
+    </select>
+
+    <label>Callback Logic</label>
+    <input id="callbackInput" placeholder="multiply by 2 / > 3 / sum" />
+
+    <button id="runBtn">Run Simulation</button>
+
+    <div class="output">
+      <h2>Result</h2>
+      <pre id="result"></pre>
+
+      <h2>Iteration Log</h2>
+      <pre id="log"></pre>
+    </div>
+  </div>
+
+</body>
+<script src="index.js"></script>
+</html>

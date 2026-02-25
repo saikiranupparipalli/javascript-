@@ -4,6 +4,7 @@ const method = document.getElementById("methodSelect");
 const callback = document.getElementById("callbackInput");
 const result = document.getElementById("result");
 const log = document.getElementById("log");
+
 btn.addEventListener("click", () => {
   let input = arrayinput.value.split(",");
   let num = input
@@ -20,32 +21,25 @@ btn.addEventListener("click", () => {
   } else if (method.value === "reduce") {
     reduce(num);
   }
+
   function filter(num) {
     if (callback.value === "greater than 3") {
-      const iterate = []
-      
-      num.forEach((num, index) => {
-        const decision = num > 3
-        log.innerHTML += `index:${index} -> value:${num} -> ${num}>3 = ${num} ${decision ? "->kept" : "->removed"} <br>`
-      if(decision) iterate.push(num)
-      })
-      iterate.forEach((num) => (result.innerHTML += `<li>filter:${num}</li>`))
+      num
+        .filter((num) => num > 3)
+        .forEach((num, index) => {
+          result.innerHTML += `<li>filter:${num} </li>`
+          log.innerHTML += `index:${index}->num:${num}-> ${num}> 3 ? "->kept" : "->remove" <br>`
+        });
+      // log.innerHTML = `array:${num}, method:${method.value}, callbacklogic:${callback.value}`
     }
   }
   function map(num) {
     if (callback.value === "multiply by 2") {
-      const iterateMap = []
-      
-      num.forEach((num, index) => {
-        const decision = num * 2 
-        log.innerHTML += `index:${index} -> value:${num} -> ${num}*2 = ${decision} <br>`
-        iterateMap.push(decision)
-      })
-      iterateMap.forEach((num) => (result.innerHTML += `<li>${num}</li>`))
+      num
+        .map((num) => num * 2)
+        .forEach((num) => (result.innerHTML += `<li>map:${num}</li>`));
     }
   }
-    
-    
   function reduce(num) {
     if (callback.value === "sum") {
       const reduce = num.reduce((acc, curr) => acc + curr, 0);

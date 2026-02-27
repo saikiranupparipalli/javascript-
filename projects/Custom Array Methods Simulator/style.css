@@ -16,6 +16,9 @@ body {
 h1 {
   text-align: center;
 }
+.containerlogics {
+     text-align: center;
+}
 
 label {
   display: block;

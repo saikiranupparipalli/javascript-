@@ -25,12 +25,16 @@
 let input = [2, 4, 5, 6, 5, 5];
 for (let i = 0; i < input.length; i++){
   let value = input[i]
-  // console.log(`index:${i} -> value:${value} -> ${value > 3 ? "-> kept" : "-> removed"}`)
+  console.log(`index:${i} -> value:${value} -> ${value > 3 ? "-> kept" : "-> removed"}`)
 }
 
 let arr = [2, 3, 8, 9, 0, 1]
-for (let j = 0; j < arr.length; j++){
-  console.log(`index:${j} -> element:${arr[j]}`)
-  
-  
+let find;
+for (let j = 0; j < arr.length; j++) {
+  let curr = arr[j]
+  toogle = curr > 3
+  console.log(`index:${j} -> element:${arr[j]} ${toogle ? "->kept ->stop🎯" : "->removed" } `)
+  if (toogle) {
+    break
+  }
 }

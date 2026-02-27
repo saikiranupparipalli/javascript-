@@ -61,6 +61,27 @@ btn.addEventListener("click", () => {
   }
 
   function find(num) {
+    let found;
+    
+    for (let i = 0; i < num.length; i++){
+      let curr = num[i]
+      let decision = false
+      
+      if (callback.value === "greater than 3") {
+        decision = curr > 3
+      } else if (callback.value === "equal 5") {
+        decision = curr === 5
+      }
+      log.innerHTML += `index:${i} -> value:${curr} -> ${decision ? "match found -> STOP" : "no match"} <br>`
+      
+      if (decision) {
+        found = curr
+        break;
+      }
+    }
+    result.innerHTML = found !== undefined
+        ? `<strong>find: ${found}</strong>`
+        : `<strong>find: undefined</strong>`;
     
   }
   

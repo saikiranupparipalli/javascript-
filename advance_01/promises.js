@@ -24,127 +24,157 @@
 
 NOTE: .then(), .catch(), and .finally() are functions, and since they belong to a Promise object, we call them methods.
 */
-new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        // console.log('hey')
-        resolve()
-    },1000)
-})
-.then(()=>{
-    // console.log('job done')
-})
- 
-const promiseOne = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve({username:'saikiran',email:'saikiran@zoho.com'})
-    },1000)
-})
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // console.log('hey')
+    resolve();
+  }, 1000);
+}).then(() => {
+  // console.log('job done')
+});
+
+const promiseOne = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({ username: "saikiran", email: "saikiran@zoho.com" });
+  }, 1000);
+});
 // we pass parameter inside .then function to receive the object located inside resolve function.
-promiseOne
-.then((user)=>{
-    // console.log(user)
-})
+promiseOne.then((user) => {
+  // console.log(user)
+});
 
-
-const promiseTwo = new Promise((resolve,reject)=>{
-    let error = false
-    if(!error){
-        resolve({username:'saikiran',password:'23'})
-    }else{
-        reject('ERROR.!')
-    }
-})
+const promiseTwo = new Promise((resolve, reject) => {
+  let error = false;
+  if (!error) {
+    resolve({ username: "saikiran", password: "23" });
+  } else {
+    reject("ERROR.!");
+  }
+});
 
 promiseTwo
-.then((user)=>{
+  .then((user) => {
     // console.log(user)
-    return user.username // return keyword passes the data to next step.
+    return user.username; // return keyword passes the data to next step.
     // console.log(user.username)
-})
-.then((username)=>{
+  })
+  .then((username) => {
     // console.log(username)
-})
-.catch((error)=>{
+  })
+  .catch((error) => {
     // console.log(error)
-})
-.finally(()=>{
+  })
+  .finally(() => {
     // console.log('promise has been executed')
+  });
 
-})
-
-
-const promiseThree = new Promise((resolve,reject)=>{
-    let error = true
-    if(!error){
-        resolve({username:'upparipalli',password:'902'})
-    }else{
-        reject('ERROR.!')
-    }
-})
+const promiseThree = new Promise((resolve, reject) => {
+  let error = true;
+  if (!error) {
+    resolve({ username: "upparipalli", password: "902" });
+  } else {
+    reject("ERROR.!");
+  }
+});
 
 // async/await is a syntax built on Promises that allows writing asynchronous JavaScript code in a synchronous style.
 
-async function promiseHandling(){
-    try {
-        const responce = await promiseThree
-        // console.log(responce)
-
-    } catch (error) {
-        // console.log('something went wrong.!')
-    }
+async function promiseHandling() {
+  try {
+    const responce = await promiseThree;
+    // console.log(responce)
+  } catch (error) {
+    // console.log('something went wrong.!')
+  }
 }
 
-promiseHandling()
+promiseHandling();
 /* async: is a keyword used before a function to make it return a Promise automatically.
 await: is a keyword used inside an async function to wait for a Promise to finish and get its result.
-** async/await is just a cleaner way to write Promise logic without .then() and .catch().** 
+** async/await is just a cleaner way to write Promise logic without .then() and .catch().**
 */
 
-async function randomUrl(){
-    try {
-        const url = await fetch('https://randomuser.me/api/')
-        const data = await url.json()
-        // console.log(data)
-        
-    } catch (error) {
-        // console.log('e-',error)
-    }
-    
-    
+async function randomUrl() {
+  try {
+    const url = await fetch("https://randomuser.me/api/");
+    const data = await url.json();
+    // console.log(data)
+  } catch (error) {
+    // console.log('e-',error)
+  }
 }
-randomUrl()
+randomUrl();
 
-fetch('https://api.github.com/users/saikiran-upparipalli')
-// fetch is a browser (or runtime) API provided by the environment(e.g: node.js or browser).
-.then((code)=>{
-    const data = code.json()
+fetch("https://api.github.com/users/saikiran-upparipalli")
+  // fetch is a browser (or runtime) API provided by the environment(e.g: node.js or browser).
+  .then((code) => {
+    const data = code.json();
     // console.log(data)
-    return data
-})
-.then((data)=>{
+    return data;
+  })
+  .then((data) => {
     // console.log(data)
-})
+  });
 // .catch((error) => console.log(error))
 
-
-// relearning part of promise:
+// relearning promises concept:
 
 const promOne = new Promise((resolve, reject) => {
-  setInterval(() => {
-    resolve({id:"saikiran", age: 22})
-  },1000)
+  setTimeout(() => {
+    resolve({ id: "saikiran", age: 22 });
+  }, 1000);
 }).then((info) => {
   // console.log(info)
-})
+});
 
 const promTwo = new Promise((resolve, reject) => {
-  let value = false
+  let value = false;
   if (!value) {
-    resolve({ text: "username", pass: 1346 })
+    resolve({ text: "username", pass: 1346 });
   } else {
-    reject("error")
+    reject("error");
   }
 }).then((value) => {
-  console.log(value)
-  return value.pass
-}).then((value) => console.log(value)).catch((value) => console.log(value))
+  // console.log(value);
+  // return value.pass;
+});
+// .then((value) => console.log(value))
+// .catch((value) => console.log(value))
+// .finally(() =>
+//   console.log("promise is Done but idk wheather its resolved or rejected")
+// );
+
+async function returnPromise() {
+  try {
+    const output = await promTwo;
+    // return output
+  } catch (error) {
+    console.log(error);
+  }
+}
+// returnPromise()
+
+async function searchUrl() {
+  try {
+    const url = await fetch("https://jsonplaceholder.typicode.com/users");
+    const tojson = await url.json();
+    console.log(tojson);
+  } catch (error) {
+    console.log("error:", error);
+  }
+}
+// searchUrl()
+
+const promThree = new Promise((resolve, reject) => {
+  const search = false;
+  if (!search) {
+    const url = fetch('https://api.github.com/users/saikiran-upparipalli');
+    resolve(url)
+  } else {
+    reject("something went wrong.");
+  }
+})
+  .then((search) =>  search.json())
+  .then((search) => console.log(search))
+  .catch((search) => console.log(search))
+

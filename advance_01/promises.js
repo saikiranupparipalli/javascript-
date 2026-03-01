@@ -87,7 +87,7 @@ const promiseThree = new Promise((resolve,reject)=>{
 async function promiseHandling(){
     try {
         const responce = await promiseThree
-        console.log(responce)
+        // console.log(responce)
 
     } catch (error) {
         // console.log('something went wrong.!')
@@ -104,10 +104,10 @@ async function randomUrl(){
     try {
         const url = await fetch('https://randomuser.me/api/')
         const data = await url.json()
-        console.log(data)
+        // console.log(data)
         
     } catch (error) {
-        console.log('e-',error)
+        // console.log('e-',error)
     }
     
     
@@ -122,6 +122,29 @@ fetch('https://api.github.com/users/saikiran-upparipalli')
     return data
 })
 .then((data)=>{
-    console.log(data)
+    // console.log(data)
 })
-.catch((error) => console.log(error))
+// .catch((error) => console.log(error))
+
+
+// relearning part of promise:
+
+const promOne = new Promise((resolve, reject) => {
+  setInterval(() => {
+    resolve({id:"saikiran", age: 22})
+  },1000)
+}).then((info) => {
+  // console.log(info)
+})
+
+const promTwo = new Promise((resolve, reject) => {
+  let value = false
+  if (!value) {
+    resolve({ text: "username", pass: 1346 })
+  } else {
+    reject("error")
+  }
+}).then((value) => {
+  console.log(value)
+  return value.pass
+}).then((value) => console.log(value)).catch((value) => console.log(value))

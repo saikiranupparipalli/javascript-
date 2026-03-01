@@ -57,7 +57,7 @@ btn.addEventListener("click", () => {
       let iteratereduce = [];
        const final = num.reduce((acc, curr, index) => {
         const sum = acc + curr;
-        log.innerHTML += `index:${index} -> acc:${acc} -> curr:${curr} -> ${acc}+${curr} -> result:${sum} <br>`;
+        log.innerHTML += `index:${index} -> acc:${acc} -> curr:${curr} -> ${acc} + ${curr} -> result:${sum} <br>`;
         iteratereduce.push(sum);
         return sum;
       }, 0);

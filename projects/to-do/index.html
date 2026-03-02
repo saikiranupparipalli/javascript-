@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart To-Do List</title>
+       <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>To-Do List</h1>
+
+            <!-- Input -->
+            <div class="todo-input">
+                <input
+                    type="text"
+                    id="todo-text"
+                    placeholder="Add a new task..."
+                />
+                <button id="add-btn">Add</button>
+            </div>
+            <!-- Task List -->
+            <ul id="todo-list"></ul>
+        </div>
+    </body>
+    <script>
+    const input = document.querySelector("#todo-text")
+    const btn = document.querySelector("#add-btn")
+    const todolist = document.querySelector("#todo-list")
+    
+    btn.addEventListener("click", ()=> {
+      let userInput = input.value
+      if(input.value === ''){
+        alert("please enter something.")
+      }else{
+        todolist.innerHTML += `<li>${userInput}</li>`
+        input.value = ''
+      }
+    })
+    todolist.addEventListener("click", (event) => {
+      event.target.remove()  
+    })
+    </script>
+</html>

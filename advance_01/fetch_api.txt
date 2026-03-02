@@ -5,7 +5,7 @@ of fetch are stored.
 (Promise callbacks like then, catch, finally) and must complete before,
 new external tasks like settimeout,setinterval are processed.
 
-WORKING OF FETCH API internally:
+WORKING OF FETCH API internally: C:\Users\Uppar\Dropbox\images,files -> do checkout.
 
 1.fetch() creates a Promise and it is stored in a variable
 
